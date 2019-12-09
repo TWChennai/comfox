@@ -9,7 +9,7 @@
     "author": "Abhinaya Sukumar",
     "license": "ISC",
     "dependencies": {
-        "express": "~4.0.0",
+        "express": "~4.17.1",
         "kafka-node": "^0.3.2",
         "socket.io": "^1.4.6"
     }
