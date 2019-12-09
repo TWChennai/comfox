@@ -1,0 +1,24 @@
+<html lang="en">
+  <head>
+    <title>Comfox</title>
+    <link rel="stylesheet" href="dist/app.css" type="text/css" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <script src="http://code.jquery.com/jquery-2.2.2.min.js"></script>
+    <script src="http://widget.time.is/en.js"></script>
+  </head>
+  <body>
+    <img id="tw-logo" src="tw-logo.png" />
+    <div id="comfox-logo">Comfox</div>
+    <div id="message-board"></div>
+    <div id="date-time-card">
+      <a href="http://time.is/Chennai" id="time_is_link" rel="nofollow">Chennai - </a>
+      <span id="Chennai_z424"></span>
+      <script src="http://widget.time.is/en.js"></script>
+      <script>
+      time_is_widget.init({Chennai_z424:{template:"DATE<br>TIME", time_format:"12hours:minutesAMPM", date_format:"monthname dnum, dayname"}});
+      </script>
+    </div>
+
+    <script type="text/javascript" src="dist/app.js"></script>
+  </body>
+</html>

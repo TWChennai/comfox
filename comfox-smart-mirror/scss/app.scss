@@ -1,0 +1,73 @@
+body {
+  background-color: #000;
+  color: #fff;
+  padding: 0 3%;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 36px;
+  min-height: 800px;
+}
+
+#message-board {
+
+  width: 100%;
+  position: fixed;
+  bottom: 50px;
+  height: 300px;
+
+  .user-icon {
+    height: 60px;
+    width: 60px;
+    margin: 0 auto;
+    display: block;
+  }
+ 
+ .message {
+    text-align: center;
+    font-size: 24px;
+  } 
+
+  #related-messages-container {
+    margin-top: 3%;
+    text-align: center;
+    min-height: 600px;
+
+    .user-icon {
+      height: 30px;
+      width: 30px;
+      display: inline;
+    }
+
+    .related-message {
+      margin-bottom: 2%;
+
+      span {
+        margin-left: 1%;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+#date-time-card {
+  font-size: 18px;
+  text-align: center;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+#tw-logo {
+  width: 150px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#comfox-logo {
+  font-size: 20px;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
