@@ -1,0 +1,15 @@
+{
+  "name": "comfox-twitter-stream-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "kafka-twitter-stream-server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+      "kafka-node": "0.3.x",
+      "socket.io": "1.*.*"
+  }
+}

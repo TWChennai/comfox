@@ -1,0 +1,50 @@
+<html ng-app="TwitterStreamApp">
+  <head>
+
+	<link href="http://cdn.foundation5.zurb.com/foundation.css" rel="stylesheet">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+    <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+
+	<script type="text/javascript">
+		angular.module('TwitterStreamApp', [])
+		.controller('MainController', [ '$scope', function($scope) {
+
+		  $scope.rows = [];
+		  
+		  var socket = io('http://localhost:6543');
+		  socket.emit('start stream');
+		  socket.on('new tweet', function (data) {
+		  	//Unshift function is to place the data in the first row as it comes
+		 	$scope.rows.unshift(data);
+		 	//Apply to reflect the changes in view
+		 	$scope.$apply();
+		  });
+
+
+		}]);
+	</script>
+
+	
+
+  </head>
+
+  <body ng-controller="MainController">  
+      
+	<table align="center" width="80%">
+	  <thead>
+	    <tr>
+	      <th >ThoughtWorks Tweets</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr ng-repeat="rowContent in rows">
+	      <td>{{rowContent}}</td>
+	    </tr>
+	  </tbody>
+	</table>
+
+  </body>
+
+</html>

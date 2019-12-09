@@ -1,0 +1,17 @@
+{
+  "name": "comfox-slack",
+  "version": "1.0.0",
+  "description": "App to fetch slackfeed and persisit to kafka",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Abhinaya Sukumar",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "4.13.3",
+    "kafka-node": "^0.3.2",
+    "lodash": "^4.13.1"
+  }
+}

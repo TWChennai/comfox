@@ -1,0 +1,8 @@
+.DS_Store
+.gradle/
+.idea/
+1.ipr
+1.iws
+build/
+db/
+slack.properties

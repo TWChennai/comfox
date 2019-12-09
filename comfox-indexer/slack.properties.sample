@@ -1,0 +1,4 @@
+env=<ENV>
+slack_auth_token=<SLACK_AUTH_TOKEN_FROM_OUTGOING_WEBHOOK>
+slack_related_messages_url=http://localhost:8080/comfox/related
+slack_incoming_webhook_url=<SLACK_INCOMING_WEBHOOK_URL>

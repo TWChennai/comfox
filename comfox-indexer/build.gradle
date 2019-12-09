@@ -1,0 +1,59 @@
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin:  'idea'
+apply plugin: 'gradle-one-jar'
+apply plugin: 'eu.appsatori.fatjar'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven { url "https://jitpack.io" }
+}
+
+dependencies {
+    compile 'org.apache.kafka:kafka-clients:0.9.0.1'
+    compile 'com.google.code.gson:gson:2.6.2'
+    compile 'org.apache.httpcomponents:httpclient:4.5.2'
+    compile 'org.json:json:20160212'
+    compile 'com.thinkaurelius.titan:titan-cassandra:1.0.0'
+    compile group: 'com.ullink.slack', name: 'simpleslackapi', version: '0.3'
+    compile group: 'com.thinkaurelius.titan', name: 'titan-core' , version: '1.0.0'
+    compile group: 'com.tinkerpop.gremlin', name: 'gremlin-java', version: '2.6.0'
+    compile group: 'org.quartz-scheduler', name: 'quartz', version: '2.2.1'
+    compile 'com.vdurmont:emoji-java:3.1.3'
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.github.rholder:gradle-one-jar:1.0.4'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.0'
+        classpath 'eu.appsatori:gradle-fatjar-plugin:0.3'
+    }
+}
+
+task getJar {
+}
+
+task getJarComfoxIndexer(type: OneJar) {
+    mainClass = 'ComfoxIndexerApp'
+    archiveName = 'comfox-indexer.jar'
+}
+
+task getJarJigsawDemo(type: OneJar) {
+    mainClass = 'jigsaw.JigsawDemo'
+    archiveName = 'jigsaw-demo.jar'
+}
+
+task getJarComFoxTitanCleaner(type: OneJar) {
+    mainClass = 'ComfoxTitanCleaner'
+    archiveName = 'comfox-titan-cleaner.jar'
+}
+
+getJar.dependsOn(getJarComfoxIndexer, getJarJigsawDemo, getJarComFoxTitanCleaner)

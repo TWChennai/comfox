@@ -1,0 +1,11 @@
+*.iml
+*.ipr
+*.iws
+build/
+.gradle
+out/
+.idea/
+.DS_Store
+db.config
+twitter4j.properties
+jigsaw.properties

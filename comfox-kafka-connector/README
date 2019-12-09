@@ -1,0 +1,13 @@
+To get Twitter Feeds:
+Needs a valid twitter4j.properties file with Basic Auth _and_ OAuth properties set in the current directory or root of the classpath directory.
+i.e
+debug=true
+oauth.consumerKey=*********************
+oauth.consumerSecret=******************************************
+oauth.accessToken=**************************************************
+oauth.accessTokenSecret=******************************************
+
+To poll Jigsaw Data:
+Needs a valid jigsaw.properties file with jigsaw_auth_token
+i.e
+jigsaw_auth_token=*******************************

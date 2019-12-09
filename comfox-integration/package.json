@@ -1,0 +1,11 @@
+{
+	"name": "confoxIntegration",
+	"version": "0.0.1",
+	"main": "server.js",
+	"author": "Sriram",
+	"dependencies": {
+		"express": "^4.x.x",
+		"body-parser": "^1.x.x",
+		"request": "x.x.x"
+	}
+}
