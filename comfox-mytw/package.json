@@ -2,7 +2,7 @@
   "name": "comfox-spike-myTW",
   "version": "1.0.0",
   "dependencies": {
-    "ejs": "~1.0.0",
+    "ejs": "~3.0.1",
     "express": "~4.0.0",
     "moment": "^2.12.0",
     "mysql": "*"
